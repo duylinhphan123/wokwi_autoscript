@@ -1,12 +1,28 @@
-# Wokwi CLI - Standalone Executable
+# Wokwi Automation Script
 
-🚀 **Self-contained executable version of Wokwi CLI**
+🚀 **Complete Wokwi automation toolkit with installer**
 
-## 📁 Files
+## 📁 Project Files
 
-- **`wokwi.exe`** - Main executable (9.4 MB)
+- **`wokwi.exe`** - Main executable (9.4 MB) 
+- **`wokwi_cli.py`** - Python CLI source code
+- **`wokwi_standalone.py`** - Standalone version source
+- **`setup.cmd`** - **NEW!** Installation script for system-wide setup
+- **`build.py`** - Build script for creating executables
 - **`demo_test.cmd`** - Demo script to test all features
 - **`test_url.txt`** - Sample URL file for testing
+- **`wokwi.toml`** - Configuration file
+
+## 🚀 Installation
+
+### 🛠️ **System-wide Installation (Recommended)**
+1. **Run as Administrator:** Right-click `setup.cmd` → "Run as administrator"
+2. **Automatic installation** to `C:\Program Files\WokwiTool`
+3. **Adds to PATH** - Use `wokwi` command from anywhere
+4. **Restart command prompt** for PATH changes to take effect
+
+### 📂 **Portable Usage**
+- Just run `wokwi.exe` directly from any folder
 
 ## 🎯 Usage
 
@@ -32,15 +48,33 @@ wokwi.exe diagram https://wokwi.com/projects/442394281549660161
 ```
 
 ### 🚀 Quick Start
-1. **Copy `wokwi.exe`** to your project directory
-2. **Run setup:** `wokwi.exe setup` to scan firmware
-3. **Download diagram:** `wokwi.exe diagram url.txt` if needed
+1. **Install system-wide:** Run `setup.cmd` as administrator
+2. **Or copy `wokwi.exe`** to your project directory  
+3. **Run setup:** `wokwi setup` to scan firmware
+4. **Download diagram:** `wokwi diagram url.txt` if needed
 
 ### 📋 Full Demo
 ```cmd
 # Run demo test to see all features
 demo_test.cmd
 ```
+
+## 🔧 Development
+
+### 🏗️ **Building from Source**
+```cmd
+# Install dependencies
+pip install requests toml pyinstaller
+
+# Build executables
+python build.py
+```
+
+### 📝 **Configuration**
+Edit `wokwi.toml` to customize:
+- Default directories
+- File patterns  
+- Upload settings
 
 ## 🌟 Features
 
